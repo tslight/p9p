@@ -1,0 +1,13 @@
+#!/bin/sh
+
+awk '
+{
+    gsub(/[ \t]+$/, "")
+    lines[NR] = $0
+    if ($0 != "") last = NR
+}
+END {
+    for (i = 1; i <= last; i++)
+        print lines[i]
+}
+'
