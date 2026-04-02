@@ -1,0 +1,17 @@
+#!/bin/sh
+arch=arm64
+
+export PLAN9=/usr/local/plan9
+export SHELL=$PLAN9/bin/rc
+export PAGER=$PLAN9/bin/p
+export EDITOR=$PLAN9/bin/E
+export FONT=/mnt/font/JetBrainsMonoNF-Regular/12a/font
+
+PATH=$PLAN9/bin:$PATH:$HOME/bin
+PATH=$PATH:/usr/local/bin:/opt/podman/bin
+PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
+export PATH
+
+cd $HOME
+arch -arch $arch $PLAN9/bin/acme -a -f $FONT &
+exit 0
