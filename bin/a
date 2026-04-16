@@ -2,7 +2,7 @@ export PLAN9=/usr/local/plan9
 export FONT=/mnt/font/DejaVuSansMono/16a/font
 export PATH=$PLAN9/bin:$PATH
 export EDITOR=$PLAN9/bin/E
-export PAGER=$PLAN9/bin/p
+export PAGER=$PLAN9/bin/nobs
 export SHELL=$PLAN9/bin/rc
 if [ -f $HOME/acme.dump ]; then
 	acme -a -f $FONT -l $HOME/acme.dump

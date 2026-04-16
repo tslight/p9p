@@ -3,7 +3,7 @@ arch=arm64
 
 export PLAN9=/usr/local/plan9
 export SHELL=$PLAN9/bin/rc
-export PAGER=$PLAN9/bin/p
+export PAGER=$PLAN9/bin/nobs
 export EDITOR=$PLAN9/bin/E
 export FONT=/mnt/font/JetBrainsMonoNF-Regular/12a/font
 
