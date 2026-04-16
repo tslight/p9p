@@ -13,5 +13,9 @@ PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
 export PATH
 
 cd $HOME
-arch -arch $arch $PLAN9/bin/acme -a -f $FONT &
+if [ -f $HOME/acme.dump ]; then
+	arch -arch $arch $PLAN9/bin/acme -a -f $FONT -l $HOME/acme.dump &
+else
+	arch -arch $arch $PLAN9/bin/acme -a -f $FONT &
+fi
 exit 0
